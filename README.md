@@ -1,0 +1,1 @@
+Este repositorio contem as principais noçoes para a programaçao em python.
