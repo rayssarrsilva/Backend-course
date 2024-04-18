@@ -33,5 +33,20 @@ for x in fruit:
     print(x) #iterando entre os itens da lista
 #----------------------------------------------------
 #set = {} desordenado e imutavel, mas aceita add e remove. sem duplicaçoes
-print(dir(fruits)) #mostra metodos, funçoes e atributos disponiveis
-print(help(fruints)) #detalha o dir
+
+fruits = {"apple","orange","banana","grapes","melon"}
+#print(dir(fruits)) #mostra metodos, funçoes e atributos disponiveis
+#print(help(fruits)) #detalha o dir
+
+#metodo que adiciona itens 
+print(fruits.add("pineapple"))
+#metodo que remove itens
+print(fruits.remove("apple"))
+#remove o primeiro item aleatoriamente
+#print(fruits.pop())
+print(fruits)
+#-----------------------------------------------------
+# tupla = () ordenada e unchangeable. duplicaçoes sao aceitas
+
+frutas = ("apple","orange","banana","grapes","melon")
+#dir, help, len, in. metodos disponiveis: index e count. 
