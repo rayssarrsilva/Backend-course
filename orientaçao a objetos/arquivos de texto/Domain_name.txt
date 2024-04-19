@@ -1,0 +1,38 @@
+O que é IP address? 
+  "Web browsers interact through Internet Protocol (IP) addresses. typically still refers to 32-bit IPv4 addresses".
+Como computadores conectados a internet podem ser encontrados?
+  Any Internet-connected computer can be reached through a public IP Address, either an IPv4 address (e.g. 192.0.2.172) or an IPv6 address (e.g., 2001:db8:8b73:0000:0000:8a2e:0370:1337).
+
+Estrutura de domain names:
+1- separated by dots and read from right to left
+ TLD (Top-Level Domain) 
+  The most generic TLDs (.com, .org, .net) don't require web services to meet any particular criteria
+ Local TLDs só podem ser usados em determinada lingua ou pais. (.us, .fr e .se)
+
+ TLDs containing .gov are only allowed to be used by government departments.
+ The .edu TLD is only for use by educational and academic institutions.
+
+ A TLD's maximum length is 63 characters
+
+
+ Label (or component)
+ pode conter letras de A ate Z, 0 a 9 e o carater '_' (nao começando nem terminando com este)
+
+ A domain name can have many labels (or components)
+ exemplo: developer.mozilla.org (label2, label2, TLD)
+
+ you can create "subdomains" in a domain
+2- Buying a domain name
+ you never own the domain nameInstead, you pay for the right to use a domain name for one or more years. You can renew your right, and your renewal has priority over other people's applications.
+
+ For instance, every domain name under .fire is managed by Amazon.
+
+3-Finding an available domain name
+ a-Go to a domain name registrar's website. Most of them provide a "whois" service that tells you whether a domain name is available.
+ b- Alternatively, if you use a system with a built-in shell, type a whois command into it, as shown here for mozilla.org: whois mozilla.org
+
+4-Getting a domain name
+ Go to a registrar's website.
+ Usually there is a prominent "Get a domain name" call to action. Click on it.
+ Fill out the form with all required details. Make sure, especially, that you have not misspelled your desired domain name. Once it's paid for, it's too late!
+ The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information.

@@ -1,1 +1,1 @@
-Este repositorio contem as principais noçoes para a programaçao em python.
+Este repositorio contem as principais noçoes para se tornar um desenvolvedor back end.

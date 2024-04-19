@@ -28,6 +28,8 @@ def calculo(a,b):
 
 calculo(8123, 123)
 
+
+#W3SCHOOLS
 #This way the function will receive a dictionary of arguments, and can access the items accordingly:
 def minha_funçao(**parametro):
     print("seu ultimo nome é " + parametro["fname"]) #o que for colocado entre aspas irá aparecer
@@ -67,4 +69,12 @@ def my_function(a, b, /, *, c, d): #2 posicionais e 2 keyword
 
 my_function(5, 6, c = 7, d = 8)
 
+def Recursion(k):
+    if (k > 0):
+        a = k + Recursion(k - 1)
+        print(a)
+    else:
+        a = 0
+    return a
 
+Recursion(5)

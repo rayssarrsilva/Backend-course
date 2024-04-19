@@ -1,0 +1,22 @@
+1-Web hosting
+    is an online service that allows you to publish your website files onto the internet. So, anyone who has access to the internet has access to your website.
+
+2-What is the difference between webpage, website, web server, and search engine?
+    web page
+    A document which can be displayed in a web browser such as Firefox and Google Chrome. These are also often called just "pages."
+
+    website
+    A collection of web pages which are grouped together. Often called a "website" or a "site."
+
+    web server
+    A computer that hosts a website on the Internet.
+
+3-Shared Hosting vs. VPS Hosting vs. Dedicated Server
+    Shared Hosting: a server/where a website lives, lugar onde voce hosteia seu site com outros websites.
+    its like you have a folder on a computer, with hundreds of other folders on the same computer.
+    (nao indicado pra sites grandes, ja que muitas pessoas vao usar os mesmos recursos)
+
+    VPS Hosting: virtual private server, or virtual machine sold as a service by an internet hosting service.
+    you have a virtual computer all for yourself.
+
+    Dedicated Server: uma maquina inteira apenas para o seu website ser hosteado.

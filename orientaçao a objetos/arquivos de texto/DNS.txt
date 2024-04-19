@@ -1,0 +1,11 @@
+1-DNS refreshing
+    Os bancos de dados DNS são armazenados em todos os servidores DNS em todo o mundo
+    all these servers refer to servers called "authoritative name servers" or "top-level DNS servers" — these are like the boss servers that manage the system.
+
+2-How does a DNS(Domain Name System) request work?
+DNS translates domain names to IP addresses so browsers can load Internet resources.
+    a- voce digita o domain name na barra de pesquisa
+    b- o computador tenta identificar o dominio usando o cache DNS local.
+    se for encontrado o nome é traduzido pro IP address e o browser negocia o conteudo com o web server.
+    c- se o computador nao reconhecer o IP atras do domain name, ele pergunta a um DNS server que deve informar
+    precisamente o IP address. e então voce acessa o conteudo do web server.
