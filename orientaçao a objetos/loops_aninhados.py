@@ -23,3 +23,6 @@ for c in range(rows):
     for d in range(columns):
         print(symbol, end="")
     print()
+
+
+
