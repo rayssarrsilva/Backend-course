@@ -1,0 +1,20 @@
+How the Internet Works: An Overview
+     Conecta dispositivos e sistemas de computadores juntos, usando um set de protocolos padronizados.
+    Esses protocolos definem como a informaçao será trocada entre os dispositivos e garante que os dados serao
+    transmitidos de forma segura.
+     Para garantir que os packets seráo enviados e recebidos corretamente, a internet usa diversos protocolos 
+     incluindo o IP (internet protocol) e o TCP (Transmission Control Protocol).
+     IP: responsavel por destinar os packets corretamente.
+     TCP: Garante que os packets serão transmitidos na ordem correta de forma confiavel.
+     outros protocolos sao: DNS(domain name system), HTTP(Hypertext transfer protocol), SSL/TLS (Secure sockets layer/Transport Layer security).
+     Packet, sao pequenas unidades de dados transmitidos pela internet.
+     Router, um dispositivo que direciona packets de dados entre diferentes networks.
+     IP Address, um identificador unico associado a cada dispositivo na network, usado para rotear dados para o destinatario certo.
+     Domain Name, um  nome usado para identificar um website.
+     DNS, responsavel por traduzir o damin name para um IP address.
+     HTTP, usado para transferir dados entre o client(web browser) e o server(website).
+     HTTPS, uma versao criptografada do HTTP usada para garantir segurança na comunicaçao entre o client e o server.
+     SSL/TLS, providencia comunicaçao criptografada.
+
+
+Fonte: https://cs.fyi/guide/how-does-internet-work
