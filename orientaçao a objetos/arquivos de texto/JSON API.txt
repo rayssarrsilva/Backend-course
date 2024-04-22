@@ -1,0 +1,6 @@
+JSON API, define two things:
+1- How the client can ask for a resource to be fetched or modified.
+2- How the server should respond to such requests.
+
+Fetched: buscada
+------------------------------------

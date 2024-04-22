@@ -1,0 +1,48 @@
+fonte: https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
+1- browsers
+    A web browser is a software application that enables a user to access and display web pages or other online content through its graphical user interface
+    
+    Network latency is the time it takes to transmit bytes over the air to computers
+
+    Web performance is what we have to do to make the page load as quickly as possible.
+
+    Two major issues in web performance are:
+        latency
+        browsers single-threadeds
+
+        Network latency: is the time it takes to transmit bytes over the air to computers
+
+        Web performance: is what we have to do to make the page load as quickly as possible.
+
+        Browsers single-threaded: execute a task from beginning to end before taking up another task
+
+        How to solve it?
+            Web performance can be improved by understanding the single-threaded nature of the browser and minimizing the main thread's responsibilities
+
+2- Navigation
+    One of the goals of web performance is to minimize the amount of time navigation takes to complete.
+    In ideal conditions, this usually doesn't take too long, but latency and bandwidth are foes that can cause delays.
+
+
+3-DNS lookup
+     If you've never visited the site, a DNS lookup must happen.
+     If your fonts, images, scripts, ads, and metrics all have different hostnames, a DNS lookup will have to be made for each one. (This can be problematic for performance)
+     Quando um usuário está em uma rede móvel, cada pesquisa de DNS precisa ir do telefone até a torre de celular para chegar a um servidor DNS oficial. A distância entre um telefone, uma torre de celular e o servidor de nomes pode adicionar latência significativa.
+
+4-TCP handshake
+    Após a maquina encontrar o endereço IP, o navegador realiza uma conexão com o servidor através de um handshake TCP.
+    O TCP handshake foi projetado para que o -navegador e o servidor- Web negociem os parametros de conexão -soquete TCP- geralmente por HTTPS.
+
+5-TLS negotiation
+    a negociação TLS, determina qual cifra será usada para criptografar a comunicação.
+    a conexão segura aumente o tempo de carregamento da página, porem os dados transmitidos entre o navegador e o servidor Web não podem ser descriptografados por terceiros.
+
+6- Resposta
+    Apos realizar a conexão com o servidor web, o navegador envia uma solicitaçao HTTP GET (para sites, geralmente é um arquivo HTML).
+    Assim o servidor responde com cabeçalhos relevantes + conteudo do HTML.
+    Time to First Byte (TTFB) é o tempo entre quando o usuário fez a solicitação — digamos clicando em um link — e o recebimento desse primeiro pacote de HTML.
+    
+
+
+
+
