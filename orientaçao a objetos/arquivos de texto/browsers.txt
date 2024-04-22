@@ -2,7 +2,7 @@ fonte: https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_wor
 1- browsers
     A web browser is a software application that enables a user to access and display web pages or other online content through its graphical user interface
     
-    Network latency is the time it takes to transmit bytes over the air to computers
+    Network latency is the time it takes to transmit bytes over the air to computers.
 
     Web performance is what we have to do to make the page load as quickly as possible.
 

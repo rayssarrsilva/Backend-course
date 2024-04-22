@@ -1,0 +1,36 @@
+O que é HTTP?
+    Hypertext Transfer Protocol é usado pra carregar webpages usando hypertext(link documents to other documents in a text) link.
+    é uma aplicação em camada, destinada a transferir informações entre dispositivos conectados a internet.
+    Exemplo: a client machine making a request to a server, which then sends a response message.
+
+What is in an HTTP request?
+    HTTP request, é a forma como web browsers pedem por informaçoes necessarias para carregar um website.
+    Um HTTP request tipico contem:
+        A- HTTP version type
+        B- a URL
+        C- HTTP method (indica a açao que o HTTP request espera que o servidor faça.
+        Exemplo: Os metodos HTTP "Get" e "Post", na sequencia esperam que seja retornada informaçao e o outro que seja enviada informaçao.)
+        D- HTTP request headers (Armazenam informaçoes em key-values, contendo qual browser o client está usando e que tipo de dado está sendo solicitado.)
+        E- Optional HTTP request body (contem qualquer informação que está sendo cedida ao servidor web.
+        Exemplo: nome de usuario, senha ou qualquer outro dado inserido em um formulario.)
+
+What is in an HTTP responde?
+    Um HTTP responde é o que um client web(navegadores) recebem de um internet server em resposta ao HTTP request.
+    Um HTTP response tipico contem:
+        HTTP status code ( 3 digitos para indicar se um HTTP request foi completado com sucesso.
+          Sao eles: 1xx Informational (geralmente indica uma resposta informativa)
+                    2xx Success
+                    3xx Redirection (redirecionamento para solucionar o erro)
+                    4xx Client Error (indica um client-side error, geralmente ocorre se houver um erro de digitaçao na URL)
+                    5xx Server Error (indica que algo deu errado no lado do servidor)
+                    obs: "xx" indicam numeros entre 00 e 99)
+        HTTP response headers (contem a lingua e o formato do dado enviadas pelo responde body)
+        optional HTTP responde body (respostas HTTP bem sucedidas ao 'GET' request geralmente possuem body que contem as informaçoes solicitadas)
+
+Can DDoS attacks be launched over HTTP?
+    solicitações HTTP em grandes quantidades podem ser usadas para montar um ataque a um dispositivo alvo e são consideradas parte de ataques à camada de aplicação ou ataques à camada 7.
+
+                    LINKS PARA VERIFICAR SE UM SITE É SEGURO OU NAO:
+                    https://possoconfiar.com.br
+                    https://registro.br
+    
