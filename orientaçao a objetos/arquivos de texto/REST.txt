@@ -1,0 +1,118 @@
+What is Rest(Representational State Transfer) API?
+  database <> web server <> restful api <> website
+
+RESTful systems (REST-comliant systems), sao caracterizados por não terem estado e separarem a relaçao do cliente e do servidor.
+REST (Representational State Transfer), é um estilo arquitetonico que providencia 'padrões' entre sistemas de computadores na web.
+ 
+ Separation of Client and Server
+    no estilo de arquitetura REST, a implementaçao do client e do server podem ser feitas de forma independente.
+    isso significa que o codigo no client pode ser feito a qualquer momento sem que afete a operaçao no servidor, vice e versa.
+    Contanto que cada lado saiba o formato da mensagem a ser enviado, eles podem manter-se modulares e separados. almentando a flexibilidade e escalabilidade.
+    "By using a REST interface, different clients hit the same REST endpoints, perform the same actions, and receive the same responses"
+ 
+ Statelessness
+    Os sistemas que seguem o paradigma REST sao stateless, significa que o server nao precisa saber nada sobre o estado do cliente, vice versa.
+    Dessa forma ambos podem entender qualquer mensagem recebida sem informaçoes prévias. Essa restrição de statelessness é implementada pelo uso de recursos ao invez de comandos.
+    recursos sao substantivos da web, descrevem objetos, documentos ou algo que voce precisa guardar ou enviar para outros serviços.
+
+    REST systems interagem por padroes de operaçoes en recursos e nao dependem da implementaçao de interfaces.
+    Essas restrições ajudam aplicações RESTful alcançarem confiabilidade, perfomance rápida e escalabilidade que podem ser gerenciadas, atualizadas e reutilizadas sem afetar o sistema como um todo,
+    mesmo durante a operaçao do sistema.
+
+
+Communication between Client and Server
+    Na arquitetura REST, o cliente é responsavel por mandar requests para recuperar ou modificar recursos, e o server manda responses para essas requests.
+
+Making Requests
+    O REST requer que o cliente faça um request para o server modificar ou recuperar dados do servidor.
+    Um request geralmente consiste de:
+    - um verbo HTTP, define o tipo de operaçao a ser performada.
+    - cabeçalho, permite ao client repassar informaçoes sobre o request.
+    - um caminho para o recurso.
+    - uma mensagem opcional no body contendo dados.
+
+HTTP Verbs
+    Estes sao 4 verbos HTTP usados em requests para interagir com recursos no REST system:
+    
+    GET - busca um recurso especifico (por id) ou uma coleção de recursos.
+    POST - cria um novo recurso.
+    PUT - atualiza um recurso especifico por id.
+    DELETE - remove um recurso especifico por id.
+
+Headers and Accept parameters
+    No cabeçalho da request, o usuario envia o tipo de conteudo que ele está habilitado a receber do servidor. Isso é chamada de campo "Accept" e garante que 
+    o servidor nao envie dados que nao podem ser entedidos ou processados pelo client. As opçoes para tipo de conteudo são do tipo MIME (Multipurpose Internet Mail Exenteions).
+    
+    MIME types, usados para especificar o tipo do conteudo no campo "Accept", consiste em um Type e um Subtype. separados por uma barra (/).
+        Exemplo 1: se um arquivo texto contem HTML será especificado como type text/html (type e subtype), se contem CSS será text/css e se for generico será denotado como text/plain (valor padrao).
+        Exemplo 2: Se um client está acessando um recurso com id 23, no recurso "articles" em um servidor, deverá enviar um GET request assim:
+            GET /articles/23
+            Accept: text/html, application/xhtml (o cabeçalho Accept mostra que o client poderá aceitar o conteudo em text/html ou application/xhtml).
+Paths
+    Em RESTful APIs, paths sao designados a ajudar o client saber o que está acontecendo. Uma request deve conter um caminho para o recurso em que a operaçao será performada.
+    Paths devem conter informaçoes necessárias para localizar recursos com o grau de especificaçao necessário. Quando se trata de listas ou coleções de recursos, nao é sempre necessário adicionar um id.
+      Exemplos: DELETE fashionboutique.com/customers/:id (deleta o id especificado) e GET fashionboutique.com/customers/:id (retorna o id especificado) 
+    POST fashionboutique.com/customers (adiciona um cliente novo, gerando um id automaticamente).
+
+Response Codes   
+
+    403 (Forbidden/Proibido) - o client nao tem a permissao para acessar o recurso.
+    404 (Not found/Não encontrado) - o recurso nao foi encontrado. pode ter deletado ou nao existe ainda.
+    400 (Bad request/Pedido ruim) - a request nao pode ser processada por causa da má syntax, tamanho excessivo ou algum outro erro do client.
+    200 (ok) - criado com sucesso.
+    201 (created) - item criado com sucesso.
+    204 (No content/sem conteudo) - resposta bem sucedidade em que nao há nada a ser retornado no body.
+    500 (Internal server error) - Resposta generica para um erro inesperado se nao tiver mais informaçoes especificas disponiveis.
+     É desejavel que sejam retornados os seguintes valores para os seguintes requests:
+    GET — return 200 (OK)
+    POST — return 201 (CREATED)
+    PUT — return 200 (OK)
+    DELETE — return 204 (NO CONTENT) If the operation fails, return the most specific status code possible corresponding to the problem that was encountered.
+
+Cache
+
+    Cache é um armazenamento computacional estruturado focado em armazenadar dados frequentemente acessados. Pelo caching é possivel reduzir ou ate eliminar a necessidade do client enviar requests para o servidor
+    (que deve informar se o request é armazenavel em cache ou nao).
+
+Resources
+    REST é baseado em recursos, recursos sao informaçoes que podem ser nomeadas. é usado um recurso para identificar o queo client deseja acessar no servidor.
+    pode ser escrito em JSON, XML, HTML etc.
+
+Proxy
+    proxy é um aplicativo de servidor que atua como intermediário entre um cliente que solicita um recurso e o servidor que fornece esse recurso. Melhora a privacidade, segurança e desempenho no processo.
+
+URL - endereço para especificar um recurso e o acesso dele.
+URI - Está dentro de uma URL, especifica qual recurso o cliente deseja acessar na request. EXP: /products (URI) // https:api.example.com/ (URL)
+
+Route Parms 
+    São parametros inseridos na URL com informaçao para identificar um recurso especifico para realizar uma ação na sequencia como: get, post, update ou delete.
+    Exemplo: http://api.example.com/products/1
+
+    No exemplo o route parm com valor 1 identifica o recursoque será manipulado no request.
+
+Query params 
+    Sao parametros inseridos na URL usados para filtrar, procurar ou paginar informaçoes sobre recursos.
+    Exemplo: http://api.example.com/products?name=laptop&available=true
+
+    No exemplo o client comunicaque o server deve retornar produtos com nome igual laptop e disponibilidade igual a True.
+
+HTTP protocol   
+    Determina os metodos permitidos em uma REST API, ou seja os tipos de açao que o cliente pode demandar em um request mas também o status do codigo que o server retorna em resposta para ter um bom fluxo de comunicação.
+    ----------------------------------------------------
+
+    https://www.codecademy.com/article/what-is-crud
+    CRUD = Create, Read, Update, Delete
+    É comum em web aplicações porque prove a memoria framework para relembrar desenvolvedor de como construir modelos completos e utilizaveis.
+    
+        Supondo que exista um catalogo de livros:
+    Create - consiste em uma função chamada para adicionar novos livros ao catalogo. a funçao adicionaria valores para os keys.
+    Read - Função criada para ver todos os livros em um catalogo.
+    Update - Funçao chamada para informar que algum livro foi alterado.
+    Delete - Funçao chamada para remover um livro do catalogo.
+    ----------------------------------------------------
+
+O que é REST API?
+    REST API (RESTful API) é uma interface programa aplicaçao (API ou web API) que comporta as restriçoes da arquitetura REST e permite interaçao com RESTful web services.
+O que é uma API?
+    É um mediador entre o client e os recursos/web serviços que o usuario deseja usar. é também uma forma da organização compartilhar recursos e informações enquanto mantem segurança, controle e autenticação -- determinando quem tem acesso.
+
