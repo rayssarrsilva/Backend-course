@@ -115,4 +115,4 @@ O que é REST API?
     REST API (RESTful API) é uma interface programa aplicaçao (API ou web API) que comporta as restriçoes da arquitetura REST e permite interaçao com RESTful web services.
 O que é uma API?
     É um mediador entre o client e os recursos/web serviços que o usuario deseja usar. é também uma forma da organização compartilhar recursos e informações enquanto mantem segurança, controle e autenticação -- determinando quem tem acesso.
-
+    
