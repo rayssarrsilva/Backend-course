@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // let 
+            let person = {
+        "name": "Spongebob",
+        "age": 30,
+        "isEmployed": true,
+        "hobbies": ["karate", "pesca", "luta"]
+            }  
+    
+        const jsonperson = `{
+        "name": "Spongebob",
+        "age": 30,
+        "isEmployed": true,
+        "hobbies": ["karate", "pesca", "luta"]
+        }`   
+    
+        // const
+        const arquivo = [{
+        "name": "Spongebob",
+        "age": 30,
+        "isEmployed": true
+        },
+        {
+        "name": "patrick",
+        "age": 34,
+        "isEmployed": true
+        },
+        {
+        "name": "Squidward",
+        "age": 40,
+        "isEmployed": true
+        },
+        {
+        "name": "Sandy",
+        "age": 27,
+        "isEmployed": false
+        }]
+        
+        const jsonString = JSON.stringify(person)
+        console.log(jsonString)
+    
+        const jsonpraJs = JSON.parse(jsonperson)
+        console.log(jsonpraJs)
+    
+        console.log(arquivo)
+        
+        </script>
+</body>
+</html>
