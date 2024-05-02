@@ -1,0 +1,50 @@
+O processo de autenticaçao de API valida a identidade do client que está tentando realizar uma conexão usando um protocolo de autenticação.
+Esse protocolo envia as credenciais do client remoto (solicitando a conexão), para o servidor de acesso remoto tanto em texto ou de forma encriptografada.
+O servidor entao verifica se ele pode ter acesso ou não.
+
+Lista das maneiras mais comuns de autenticação:
+1- JWT Authentication (JSON web token)
+    Pode ser usado pra autorização assim como proteger a troca de informaçoes.
+    Token é uma URL-safe string e pode ser passado para o server no header, body ou URL. Possui três partes separadas separadas por um ponto (header.payload.signature)
+
+        header: contem, type of token e algorithm usado na signature part.
+        payload: contem, claims(requisiçoes).
+            Registered claims: iat (issued at), iss (who issued it, app name for example), sub (toke subject), exp (expiry timestamp), aud (token audience), nbf(timestamp before wich token is not usable), jti (unique token identificer, can be used to revoke existing JWT token) / public claims(userid,email,above,etc) e
+            Private claims(Names without any meaning to anyone except the consumer and producer of tokens)
+            signature: header(header + '.' + payload, 'secret') usado para para gerar e verificar servers.
+
+2- Token based Authentication
+    são sem estado, o que significa que nao guardam nenhuma informaçoes sobre o usuario no servidor ou na sessão.
+3- Session based Authentication
+4- Basic Authentication
+5- OAuth - Open Authorization
+6- SSO - Single Sign On
+
+How user authentication works?
+    O processo é bastante simples; os usuários inserem suas credenciais no formulário de login do site. 
+    Essas informações são então enviadas para o servidor de autenticação, onde são comparadas com todas as credenciais do usuário arquivadas.
+
+Top user authentication methods
+    Knowledge factors(fatores de conhecimento): username, senha ou numero pin. sao fatores de autenticação fraccos em termos de segurança pois podem ser compartilhados.
+    Possession factors(fatores de posse): Tudo que o usuario precisar para fazer o login, além do knowledge factor. exemplo: token de uso unico (magic link),  porta chaves, tokens fisicos e cartoes de identificação.
+    Inheritance factors(Fatores de herança): Faz o uso de qualquer caracteristica biologica para autenticação. exemplo: autenticação biometrica como scaneamento de impressão digital ou reconhecimento facial.
+
+Passwordless User Authentication Methods
+    Biometrics:
+        The user presses his finger on the scanner and waits for the system to grant him access.
+        Behind the scenes, the system compares the fingerprint scanned with the original print on file.
+        If the two match, the system grants the user access.
+
+    Email Authentication:
+        Faz o uso de Magic link ou Magic message.
+
+Cookie-based authentication
+    HTTP protocol não possui estado, isso significa que se o usuario autenticar no proximo request a aplicação não saberá que é a mesma pessoa nessa request.
+    Então o cookie-based authentication faz com que a autenticação seja mantida tanto no servidor como no client.
+    
+JWT Authentication (JSON Web Tokens)
+    Token-Based Authentication - são sem estado, o que significa que nao guardam nenhuma informaçoes sobre o usuario no servidor ou na sessão.
+
+
+
+
