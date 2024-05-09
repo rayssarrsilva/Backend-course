@@ -35,16 +35,33 @@ Passwordless User Authentication Methods
         Behind the scenes, the system compares the fingerprint scanned with the original print on file.
         If the two match, the system grants the user access.
 
-    Email Authentication:
-        Faz o uso de Magic link ou Magic message.
 
-Cookie-based authentication
-    HTTP protocol não possui estado, isso significa que se o usuario autenticar no proximo request a aplicação não saberá que é a mesma pessoa nessa request.
-    Então o cookie-based authentication faz com que a autenticação seja mantida tanto no servidor como no client.
-    
 JWT Authentication (JSON Web Tokens)
-    Token-Based Authentication - são sem estado, o que significa que nao guardam nenhuma informaçoes sobre o usuario no servidor ou na sessão.
+    JSON Web Token - o server cria um token para o usuario, e fica responsavel de guardar as informaçoes de responde e request. assim, o servidor será dispensado de armazenar os dados de cada session com cookies.
+    playground jwt: https://jwt.io/
+
+    Estrutura do JWT:
+        Header: type of token e algoritmo de assinatura
+        Payload: dados do usuario e dados adicionais. existem três tipos: 
+            claim registrado: iss (emissor), exp(prazo de validade), sub(assunto), aud(audiencia). nao sao obrigatorias, mas fornecem declaraçoes uteis
+            claim publica: sao definidas no IANA JWT registry ou como um URI com namespace. podem ser definidas a vontade
+            claim privada: sao claims personalizadas para compartilhar informaçoes entre as partes que concordam em usa-las.
+        Signature: verifica se a mensagem nao foi alterada durante o percurso, e nos casos de token com chave privada pode verificar se o usuario diz ser quem é.
+
+Basic Authentication (Basic auth)
+    todos os navegadores tem suporte para autenticaçao HTTP basica. Ela funciona por meio da resposta do servidor.
+    O navegador envia um request para o server, o server tenta checkar a disponibilidade do header de autorização no request. por ser o primeiro request, nenhum header de autorização é encontrado no request.
+    Apos receber a resposta do servidor o navegador irá mostrar a autenticação popup. entao o navegador encoda as credenciais usando base64 e envia para o server da mesma request. o server ira decodar e verificar as credenciais,
+    se forem validas o server mandará uma resposta ao client.
+    Fonte: https://roadmap.sh/guides/http-basic-authentication
 
 
+Cookie based
+    A autenticação cookie based é a mais usada atualmente para conexao browser-server. 
+    O usuario envia seu login e senha para o servidor, que valida e cria uma sessão que é salva no database, respondendo com uma session ID que é salvo no navegador do úsuario graças aos cookies (guarda pares do tipo key-value).
+    É vulneraveo a ataques CSRF (Cross-site request forgery)
 
-
+Token Authentication (Token Auth) 
+    O client envia os dados de login para o server por meio dos metodos HTTP,  ao invez de guardar os dados no server ele cria um JSON web token para armazenamento. 
+    Entao o brower coloca o JWT em armazenamento local, é mais eficiente quando trabalhado com sistemas distribuidos ou nuvem.
+FONTES: https://youtu.be/UBUNrFtufWo?si=P39MRMeH4esqnQ4p
