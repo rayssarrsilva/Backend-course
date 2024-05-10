@@ -1,0 +1,15 @@
+HATEOAS (Hypermedia As The Engine Of Application State)
+    É o conceito de que quando enviaado informação através de uma RESTful API, o documento recebido deve conter tudo que o client precisa para analisar
+    e usar os dados, nao precisando entrar em contato com nenhum outro terminal/endpoint não mencionado no documento.
+    
+    Hypermedia são links que direcionam para diferentes partes da API.
+    também são links de documentaçao para ajudar o desenvolvedor a usar a API.
+
+    HATEOAS fazem APIs self-descriptive
+        Quais problemas o HATEOAS resolve? 
+            - Nao implica a necessidade do desenvolvedor saber tudo sobre a aPI.
+            - Permite que a API evolua independentemente do consumo, sem travar.
+
+
+Ao fazer um GET request, será retornado a chave e o valor, o HATEOAS virá logo abaixo com outras sugestões de acesso informando o tipo de metodo HTTP que pode ser realizado,
+na url especificada. 

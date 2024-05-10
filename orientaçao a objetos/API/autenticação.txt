@@ -48,10 +48,16 @@ Passwordless User Authentication Methods
 
 3- Cookie based
     A autenticação cookie based é a mais usada atualmente para conexao browser-server. 
-    O usuario envia seu login e senha para o servidor, que valida e cria uma sessão que é salva no database, respondendo com uma session ID que é salvo no navegador do úsuario graças aos cookies (guarda pares do tipo key-value).
+    O usuario envia seu login e senha para o servidor, que valida e cria uma sessão que é salva no database, respondendo com uma session ID que é salvo no navegador do úsuario ao aceitar aos cookies (guarda pares do tipo key-value).
     É vulneraveo a ataques CSRF (Cross-site request forgery)
 
 2- Token Authentication (Token Auth) 
     O client envia os dados de login para o server por meio dos metodos HTTP,  ao invez de guardar os dados no server ele cria um JSON web token para armazenamento. 
     Entao o brower coloca o JWT em armazenamento local, é mais eficiente quando trabalhado com sistemas distribuidos ou nuvem.
 FONTES: https://youtu.be/UBUNrFtufWo?si=P39MRMeH4esqnQ4p
+
+5- Open Authorization (OAuth)
+    É um framework pra REST/APIs. Trabalha para autorizar dispositivos, APIs, servidores e aplicações usando tokens de acesso no lugar das credenciais do usuario. Metodo conhecido como "Acesso delegado seguro".
+    Seu diferencial é que permite que o usuario acesse a conta sem ter que digitar seu login e senha, comumente usado em autenticações do Facebook, Amazon e Twitter.
+    Processo: app faz um request de autorização pro usuario, o usuario aceita e entrega o comprovante, o app apresenta o comprovante de autorizaçao pro server para adquirir um token, o token é restritado para acessar apenas o que o usuario autorizou no app especifico.
+    FONTE: https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth

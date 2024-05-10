@@ -1,0 +1,68 @@
+JSON API, define two things:
+1- How the client can ask for a resource to be fetched or modified.
+2- How the server should respond to such requests.
+
+Fetched: buscada
+------------------------------------
+
+JSON 
+    sintaxe/estrutura: 
+    para cada valor, atribui-se um rótulo que descreve seu significado (chave-valor), derivado do JavaScript.
+
+    Representando números
+    "Ano": 2024
+    "altura": 1.65
+
+    Representando Stirngs
+    "site": "www.devmedia.com.br"
+
+    Representando um número negativo
+    "temperatura": -2
+
+    Representando um valor booleano
+    "casado": true
+
+    Tipos complexos: Array e objeto.
+    Array: [] Os arrays são delimitados por colchetes, com seus elementos separados entre vírgulas.
+    Objeto: {} Os objetos são especificados entre chaves e podem ser compostos por múltiplos pares nome/valor, por arrays e também por outros objetos.
+
+    Array de Strings
+    [“RJ”, “SP”, “MG”, “ES”]
+
+    Matriz de Inteiros
+    [
+        [1,5],
+        [-1,9],
+        [1000,0]
+    ]
+
+    Objeto
+    {
+        “titulo”: “JSON x XML”,
+        “resumo”: “o duelo de dois modelos de representação de informações”,
+        “ano”: 2012,
+        “genero”: [“aventura”, “ação”, “ficção”]
+    }
+
+    Array de objetos
+    [
+        {
+            “titulo”: “JSON x XML”,
+            “resumo”: “o duelo de dois modelos de representação de informações”,
+            “ano”: 2012,
+            “genero”: [“aventura”, “ação”, “ficção”]
+            },
+        {
+            “titulo”: “JSON James”,
+            “resumo”: “a história de uma lenda do velho oeste”,
+            “ano”: 2012,
+            “genero”: [“western”]
+            }
+    ]
+
+FONTE: https://www.devmedia.com.br/json-tutorial/25275
+
+
+
+
+
