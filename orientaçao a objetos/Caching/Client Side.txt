@@ -27,8 +27,15 @@ Como o conteudo é armazenado no cache?
             no-cache: conteudo pode ser armazenado no cache mas deve ter validação do server.
             max-age=3600: conteudo pode ser cacheado pelo numero de segundos apresentado.
             s-max-age=3600: caching duration for the shared places or proxies. S, de shared.
-    Validators(validando se o conteudo no cache ainda está disponivel):
-        etag
-        if-none-match
-        last-modified
-        if-modified-since
+            must-revalidade: requer permissao do server
+            proxy-revalidate: nunca veicule o conteúdo obsoleto disponível no proxy e deve validar.
+    Validators(validando se o conteudo no cache ainda está disponivel, usado pelo client para fazer um request condicional no server):
+
+        etag: identificado unico associado ao recurso. usado pelo client para fazer um request e conferir se o conteudo no cache foi alterado. este é criado pelo server 
+
+        if-none-match: O client enviará um request com a tag if-none-Match: "etag(valores hexadecimais)" par o server conferir se é o mesmo ETag. se não for o mesmo, o server responderá com um novo ETag,
+         se combinar o server responde com 304 (nao modificado) e o client renova o cache pelo tempo estimado no cache control.  
+
+        last-modified: Indica a data e o tempo que o conteudo foi modificado da ultima vez.
+        if-modified-since: quando o conteudo fica velho, client fará uma request condicional com a ultima data modificada.
+        
