@@ -1,0 +1,34 @@
+caching
+    Caching é uma tecnica de armazenar dados frequentemente usados ou informação na memoria local por um certo periodo de tempo.
+    Quando o client faz um rrequest da mesma informação, ao invez de recuperar a informação do database, ele dará a informação da memoria local.
+    A vantagem principal de caching é que melhora a performace, reduzindo a carga de processamento.
+
+Client-side Caching 
+    É o armazenamento de dados de rede para um cache local, para reutilização futura. Após a aplicação buscar dados na rede, ela armazena os recursos em um cache local.
+    Quando o recurso é armazenado no cache, o navegador usa o cache em requests futuras para aumento do desempenho.
+     Client - cache - server  (usuario faz um request ao cache, se for encontrado ele retorna, se nao for encontrado ele vai para o server que retorna para o cache e entao para o browser)
+     Vantagens: Velocidade de resposta maior (latencia reduzida) e reduçao de carregamento no servidor.
+
+     Localizaçõe do cache:
+        Navegador: o cache no navegador é privado para o usuario especifico usando o website.
+        Proxy server: O conteudo é guardado dentro do proxy
+        Reverse Proxy Server: é o proxy mais perto do server, configurado pelos administradores de server e conteudo.
+
+    
+Como o conteudo é armazenado no cache? 
+    Sempre que o server manda response para o cliente, ele envia HTTP headers no responde, que sao usados pelo client ou qualquer outro intermediario para armazenar conteudo no cache. 
+    Estrutura do Caching Headers: 
+        expires: data de expiramento absoluto (nao podem ser mais que um ano)
+        pragma: para clients que nao suportam controle de cache, deve ser usado para evitar o caching. O unico valor possivel é "no-cache".  
+        content-control: cabeçalho de cache preferido, é um cabeçalho de valores multiplos e determinam o comportamento do cache.
+            private: apenas faz cache no client
+            public - pode fazer cache em proxys
+            no-store: nao pode fazer cache em nenhum lugar
+            no-cache: conteudo pode ser armazenado no cache mas deve ter validação do server.
+            max-age=3600: conteudo pode ser cacheado pelo numero de segundos apresentado.
+            s-max-age=3600: caching duration for the shared places or proxies. S, de shared.
+    Validators(validando se o conteudo no cache ainda está disponivel):
+        etag
+        if-none-match
+        last-modified
+        if-modified-since

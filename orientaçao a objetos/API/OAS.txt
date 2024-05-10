@@ -1,0 +1,6 @@
+OpenAPI Specification (OAS) 
+    Define um padrao, de interface linguagem-independente para RESTful APIs que permite tanto humanos como computadores entenderem as capacidades do serviço
+    sem acesso a documentação, código fonte ou através da inspeção de tráfego de rede. Quando definido apropriadamente, o consumidor(dev) pode entender e interagir
+    com o serviço remoto com o minimo de implementação lógica.
+
+    Pode ser usada por ferramentas de Geração de documentação para exibir API, Geração de código para gerar servidores, etc.
