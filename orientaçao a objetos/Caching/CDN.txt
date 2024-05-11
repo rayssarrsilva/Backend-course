@@ -1,0 +1,27 @@
+Content Delivery Network(CDN)
+    O conteudo de entrega de rede, é um serviço focado em prover alta disponibilidade e performance em websites. Isso é alcançado com a entrega rápida de conteúdo do site, normalmente por meio
+    de endpoints geograficamente mais próximos das solicitações do client. CDNs tradicionalmente comerciais (Amazon CloudFront, Akamai, CloudFlare, Fastly e Limelight Networks)
+    fornecem servidores em todo o mundo que podem ser usados para essa funcionalidade.
+    A vantagem de servir ativos e conteúdos por meio de uma CDN é reduzir a largura de banda na hospedagem do site, fornece uma extra camada de cache para reduzir possíveis interrupções e também melhora a segurança do site.
+
+    Peer-to-peer CDNs
+        Em redes de distribuição P2P os clients fornecem recursos e também os utilizam. 
+        Isso significa que diferentemente dos sistemas cliente-servidor, as redes focadas em conteúdo podem ter um desempenho melhor 
+        a medida que mais usuários começam a acessar o conteúdo. Mais usuarios = Mais desempenho.
+        torna os custos de configuração e operação muito pequenos para o distribuidor de conteúdo original.
+    Private CDNs 
+        Se o criador de conteúdo não estiver sadisfeito com as opções de custo de um CDN de serviço comercial, ele pode criar o próprio CDN. 
+        Consiste em PoPs (pontos de presença) que veiculam conteúdo apenas para seus proprietários. Esses PoPs podem ser servidores de cache, proxies reversos e 
+        controladores de entrega de aplicativos. Pode ser tão simples como dois servers de cache ou largo como um server de conteudo em petabytes.
+
+    Virtual CDN (vCDN)
+        tem o objetivo de reduzir o custo para o provedor de conteúdo e ao mesmo tempo, aumentar a eslasticidade e diminuir o atraso do serviço.
+        Com vCDN é possivel acabar com as limitações de CDN tradicionais como performance, confiabilidade e disponibilidade já que os caches virtuais são implantados dinamicamente em
+        servidores físicos distribuidos pela cobertura geográfica do provedor.  
+
+
+    Largura de banda, determina a velocidade que os dados trafegam através de uma rede específica
+    Endpoint, dispositivo de computação remoto que se comunica com uma rede à qual está conectado. exp: pode ser um computador, notebook, etc.
+
+
+    Fonte: https://youtu.be/Bsq5cKkS33I?si=MpDyeALZksa97dQZ
