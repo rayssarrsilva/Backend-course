@@ -6,11 +6,66 @@ Redis(remote dictionary server)
 
     Como interagir com o database ? 
 
-        Criar dados - key with string value. hello =key, world =string
-        SET hello world 
+        STRINGS:
+            Criar dados - key with string value. hello =key, world =string
+            SET hello world 
 
-        ler dados - le um key. hello =key
-        GET hello
+            ler dados - le um key. hello =key
+            GET hello
+
+            deleta dados - deleta uma chave. age =key
+            DEL age 
+
+            verifica existencia - verifica se existe a chave. frutas =key / se 0, FALSE se 1, TRUE
+            EXISTS frutas 
+
+            verifica todos os keys que combinam com determinado padrão
+            KEYS *
+
+            exclui todas as chaves existentes.
+            flushall
+
+            Mostra o tempo de expiração da chave. name =key. se, -1 = tempo indefinido
+            ttl name  
+
+            Define em segundos o tempo de expiração da chave. name =key 
+            expire name 10
+
+            Define o tempo de expiração em segundos da chave e valor especifico.
+            setex frutas 10 banana
+
+        limpa o output.
+        clear 
+
+        LISTAS:
+            adiciona o valor john a lista friends criada, lpush stands for leftpush e rpush stands for rightpush
+            lpush friends john
+            OU 
+            rpush friends mike
+
+            mostra os valores na lista friends, do começo ao fim.
+            lrange friends 0 -1 
+
+            Retira o primeiro item da lista indicada, lista =friends. Em maiusculo
+            LPOP friends
+            OU
+            RPOP
+
+        SETS(cada valor é unico mas nao tem ordem prefixada): 
+            SADD hobbies "weight lifting" - stands for set add
+
+            SMEMBERS hobbies - mostra todos os valores do set 
+
+            SREM hobbies "weight lifting" - stands for set remove
+
+        HASHES(key-value pair inside of a key-value pair):
+            HSET person name kyle - inserve valores, HSET key campo value 
+            HGET person name - ve o valor indicado pelo key e field(campo)
+            HGETALL person - ve todos os campos e valores, consecutivos.
+            HDEL person age - deleta o campo age do key person 
+            HEXISTS person name - verifica se o key person + campo name existem
+            
+
 
     é usado como um cache para fazer bancos de dados relacionais mais rápidos e escalaveis.
     Redis também é perfeitamente adequado como database primario, além de despensar o uso de camadas de chace.
@@ -25,6 +80,13 @@ Redis na pratica:
 
     1- Só é possivel instalar o redis no mac ou linux. Logo para baixar no windows é necessario ir no sub-sistema windows para linux, WSL.
     Subsistema de windows para linux: https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command
+    Comandos para instalar o redis: https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
+
+    Comandos:
+
+    redis-cli - test that your Redis server is running by connecting
+    sudo service redis-server start - start the Redis server like this
+    
 
     
 Fonte: https://youtu.be/G1rOthIU-uo?si=KHLk5pKRXntXvkZz
