@@ -1,0 +1,31 @@
+Redis(remote dictionary server)
+    Redis é de código aberto (BSD licenciado), contém armazenamento em estrutura de dados na memória e é usado como banco de dados, cache, intermediário de mensagens e ferramenta de streaming.
+    Fornece estrutura de dados como:  strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, e streams.
+    Possui replicação integrada, script Lua, remoção de LRU, transações e diferentes leveis de persistencia em disco, também fornece alta disponibilidade via Redis Sentinel e particionamento automático com Redis Cluster.
+
+
+    Como interagir com o database ? 
+
+        Criar dados - key with string value. hello =key, world =string
+        SET hello world 
+
+        ler dados - le um key. hello =key
+        GET hello
+
+    é usado como um cache para fazer bancos de dados relacionais mais rápidos e escalaveis.
+    Redis também é perfeitamente adequado como database primario, além de despensar o uso de camadas de chace.
+    Atualmente Redis possui add-on modules, que podem ser usados para melhorar o uso do database. Estes são: 
+        Redis Grap: para os dados que possuem relações e consultar com cipher. (a)-[:Likes]-(b) 
+        Redis Json: para estruturar os dados como uma hierarquia, como um documento orientado de base de dados.
+        Redis Search: Para tornar a base de dados em ferramenta de pesquisa full text.
+
+        Os modulos podem ser usados com extenções como: redis cli e a ferramenta de visão do redis.
+
+Redis na pratica:
+
+    1- Só é possivel instalar o redis no mac ou linux. Logo para baixar no windows é necessario ir no sub-sistema windows para linux, WSL.
+    Subsistema de windows para linux: https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command
+
+    
+Fonte: https://youtu.be/G1rOthIU-uo?si=KHLk5pKRXntXvkZz
+Redis ou Memcached? https://kinsta.com/pt/blog/memcached-vs-redis/
