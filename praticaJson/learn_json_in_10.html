@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--para chamar o javascript, coloque a tag script dentro do body, entao crie uma variavel em js e cole o arquivo JSON que é valido para
+    javascript-->
+    <script type="text/javascript">
+        let dados = 
+        `[{
+    "name": "kyle",
+    "favoriteNumber": 3,
+    "hobbies": ["wight", "bowling"],
+    "isProgammer": true,
+    "friends": [{
+        "name": "joey",
+        "favoriteNumber": 100,
+        "isProgammer": false
+    },
+    {
+        "name": "rayssa",
+        "favoriteNumber": 21,
+        "isProgammer":  true
+    }],
+    "family": true,
+    "familyMember": [{
+        "mother": "clara",
+        "father": "leo",
+        "sister": "maya"
+    }]},
+    {
+    "name": "louise",
+    "favoriteNumber": 3,
+    "hobbies": ["wight", "bowling"],
+    "isProgammer": true,
+    "friends": [{
+        "name": "joey",
+        "favoriteNumber": 100,
+        "isProgammer": false
+    },
+    {
+        "name": "rayssa",
+        "favoriteNumber": 21,
+        "isProgammer":  true
+    }],
+    "family": true,
+    "familyMember": [{
+        "mother": "clara",
+        "father": "leo",
+        "sister": "maya"
+    }]
+}]`
+
+console.log(dados)
+console.log(JSON.parse(dados)[0].name)
+console.log(JSON.parse(dados)[1])
+console.log(JSON.parse(dados)[1].family)
+
+    </script>
+<!-- ao colar o JSON na variavel javascript, será considerado um objeto, mas com o acento `` será uma JSON string, logo devera ser convertido para um objeto javascript
+Usando console.log(JSON.parse(variavel)) 
+Alem de ser possivel puxar dados especificos dessa forma-->
+
+</body>
+</html>
